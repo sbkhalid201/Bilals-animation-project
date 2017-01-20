@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+
+	#container{
+		width: 1000px;
+		height: 100px;
+		position: relative;
+		background-color: yellow;
+
+	}
+
+	#B{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		background-color: grey;
+		top:50px;
+	}
+	#T{
+		position: absolute;
+		background-color: green;
+		width: 50px;
+		height: 50px;
+	}
+</style>
+
+</head>
+<body>
+<div id="container">
+
+		<img src="runningrabbit.png" id="B">
+		<img src="turtle.png" id="T">
+</div>
+
+
+<button onclick="Move()">Click Me</button>
+
+
+
+
+<script type="text/javascript">
+	
+function Move(){
+	var elem = document.getElementById("B");
+	var elem2 = document.getElementById("T");
+	var pos = 0;
+	var pos2=0;
+	var id = setInterval(frame, 10);
+	var id2 = setInterval(frame, 10);
+	function frame()
+	{
+		
+		if(pos2 < 600)
+		{
+			pos2=pos2+1;
+			elem2.style.left = pos2 +'px';
+		}
+		if(pos < 300)
+		{
+			pos=pos+3;
+			elem.style.left = pos +'px';
+		}
+
+
+		/*if (pos2 == 600 ){
+			clearInterval(id);}
+		else if(pos == 300)
+			{clearInterval(id2);}
+		 else {
+			pos++;
+			pos2++;
+			elem.style.left = pos +'px';
+			elem2.style.left = pos2 +'px';
+		}*/
+		
+	}
+}
+
+
+
+</script>
+
+</body>
+
+</html>
